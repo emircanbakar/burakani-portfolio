@@ -5,11 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
-  cursor:default;
+  cursor: default;
 }
 
 :root {
-  --dark-color: #0c0c0c;
+  --dark-color: #131313;
   --light-color: #fff;
   --font-big: 1.875rem;
   --font-mid: 1.25rem;
@@ -40,18 +40,19 @@ img {
 .light2 {
   position: absolute;
   border-radius: 50%;
-  pointer-events: none; 
+  pointer-events: none;
   mix-blend-mode: screen;
+  width: 350px;
+  height: 350px;
 }
 
 .light1 {
   background: radial-gradient(
     circle,
     rgba(238, 255, 41, 0.175),
-    rgba(238, 255, 41, 0) 60%
+    rgba(238, 255, 41, 0) 70%
   );
-  width: 350px;
-  height: 350px;
+
   top: 50%;
   left: 18%;
   z-index: 1;
@@ -63,8 +64,6 @@ img {
     rgba(255, 79, 41, 0.175),
     rgba(255, 79, 41, 0) 70%
   );
-  width: 350px;
-  height: 350px;
   bottom: 50%;
   right: 18%;
   z-index: 1;
@@ -148,16 +147,14 @@ img {
   color: var(--light-color);
   font-size: var(--font-light);
   font-weight: var(--fw-bold);
-  background-color: var(--dark-color);
-  border: 2px solid #942c85;
+  background: linear-gradient(180deg, var(--dark-color) 50%, #f100bc 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  border: 2px solid #f100bc;
   cursor: pointer;
-  transition: .3s ease;
+  transition: background-position 0.3s ease;
 }
 
-.contact:hover{
-  background-color: linear-gradient(
-    180deg,
-    rgba(220, 74, 88, ),
-    rgba(148, 44, 133, )
-  );
+.contact:hover {
+  background-position: bottom;
 }
